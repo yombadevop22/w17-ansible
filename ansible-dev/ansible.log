@@ -1,0 +1,44 @@
+2025-03-15 16:48:58,689 p=13349 u=ec2-user n=ansible | 172.31.38.177 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3.7"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2025-03-15 16:48:58,915 p=13349 u=ec2-user n=ansible | 172.31.25.8 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2025-03-15 16:54:25,976 p=13493 u=ec2-user n=ansible | PLAY [all] *******************************************************************************************************************
+2025-03-15 16:54:25,989 p=13493 u=ec2-user n=ansible | TASK [Gathering Facts] *******************************************************************************************************
+2025-03-15 16:54:27,694 p=13493 u=ec2-user n=ansible | ok: [172.31.25.8]
+2025-03-15 16:54:27,769 p=13493 u=ec2-user n=ansible | ok: [172.31.38.177]
+2025-03-15 16:54:27,788 p=13493 u=ec2-user n=ansible | TASK [Create a file] *********************************************************************************************************
+2025-03-15 16:54:28,451 p=13493 u=ec2-user n=ansible | changed: [172.31.25.8]
+2025-03-15 16:54:28,495 p=13493 u=ec2-user n=ansible | changed: [172.31.38.177]
+2025-03-15 16:54:28,517 p=13493 u=ec2-user n=ansible | TASK [Check something] *******************************************************************************************************
+2025-03-15 16:54:29,091 p=13493 u=ec2-user n=ansible | fatal: [172.31.25.8]: FAILED! => {"changed": false, "cmd": "hahsajgdjadjahd", "msg": "[Errno 2] No such file or directory: b'hahsajgdjadjahd': b'hahsajgdjadjahd'", "rc": 2, "stderr": "", "stderr_lines": [], "stdout": "", "stdout_lines": []}
+2025-03-15 16:54:29,091 p=13493 u=ec2-user n=ansible | ...ignoring
+2025-03-15 16:54:29,210 p=13493 u=ec2-user n=ansible | fatal: [172.31.38.177]: FAILED! => {"changed": false, "cmd": "hahsajgdjadjahd", "msg": "[Errno 2] No such file or directory: b'hahsajgdjadjahd': b'hahsajgdjadjahd'", "rc": 2, "stderr": "", "stderr_lines": [], "stdout": "", "stdout_lines": []}
+2025-03-15 16:54:29,210 p=13493 u=ec2-user n=ansible | ...ignoring
+2025-03-15 16:54:29,219 p=13493 u=ec2-user n=ansible | TASK [Create a directory] ****************************************************************************************************
+2025-03-15 16:54:29,586 p=13493 u=ec2-user n=ansible | ok: [172.31.25.8]
+2025-03-15 16:54:29,701 p=13493 u=ec2-user n=ansible | ok: [172.31.38.177]
+2025-03-15 16:54:29,708 p=13493 u=ec2-user n=ansible | TASK [Create group] **********************************************************************************************************
+2025-03-15 16:54:30,222 p=13493 u=ec2-user n=ansible | ok: [172.31.25.8]
+2025-03-15 16:54:30,258 p=13493 u=ec2-user n=ansible | ok: [172.31.38.177]
+2025-03-15 16:54:30,266 p=13493 u=ec2-user n=ansible | TASK [Add user Serge] ********************************************************************************************************
+2025-03-15 16:54:30,294 p=13493 u=ec2-user n=ansible | skipping: [172.31.38.177]
+2025-03-15 16:54:30,304 p=13493 u=ec2-user n=ansible | skipping: [172.31.25.8]
+2025-03-15 16:54:30,314 p=13493 u=ec2-user n=ansible | TASK [command] ***************************************************************************************************************
+2025-03-15 16:54:30,684 p=13493 u=ec2-user n=ansible | changed: [172.31.25.8]
+2025-03-15 16:54:30,744 p=13493 u=ec2-user n=ansible | changed: [172.31.38.177]
+2025-03-15 16:54:30,762 p=13493 u=ec2-user n=ansible | TASK [check the date] ********************************************************************************************************
+2025-03-15 16:54:31,171 p=13493 u=ec2-user n=ansible | changed: [172.31.25.8]
+2025-03-15 16:54:31,213 p=13493 u=ec2-user n=ansible | changed: [172.31.38.177]
+2025-03-15 16:54:31,227 p=13493 u=ec2-user n=ansible | PLAY RECAP *******************************************************************************************************************
+2025-03-15 16:54:31,227 p=13493 u=ec2-user n=ansible | 172.31.25.8                : ok=7    changed=3    unreachable=0    failed=0    skipped=1    rescued=0    ignored=1   
+2025-03-15 16:54:31,228 p=13493 u=ec2-user n=ansible | 172.31.38.177              : ok=7    changed=3    unreachable=0    failed=0    skipped=1    rescued=0    ignored=1   

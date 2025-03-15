@@ -1,0 +1,19 @@
+---
+- hosts: ws
+  become: yes
+  ignore_errors: yes
+  gather_facts: yes
+  vars:
+    f_name: John
+  tasks:
+    - name: Debug module
+      debug:
+        var: f_name
+    
+    - name: vheck server uptime
+      command: uptime
+      register: uptime_output
+
+    - name: Display output variable
+      debug:
+        var: uptime_output.stdout
